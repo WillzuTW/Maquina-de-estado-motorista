@@ -57,14 +57,19 @@ public class Motorista implements Agente {
     }
 
     public void setState(State state) {
+        System.out.println("|  >> Transição: " + this.state.getClass().getSimpleName() + " -> " + state.getClass().getSimpleName());
         this.state.exit();
         this.state = state;
         this.state.enter();
     }
 
     public void printStats(String state) {
-        System.out.println("Objeto: " + this);
-        System.out.println("Estado atual: " + state);
+        System.out.println("+-- " + this + " -------------------------");
+        System.out.println("| Estado atual: " + state);
+    }
 
+    @Override
+    public String toString() {
+        return "Motorista #" + String.format("%04X", System.identityHashCode(this) & 0xFFFF);
     }
 }

@@ -6,22 +6,18 @@ public class DrivingToPassenger extends AbstractState<Motorista> {
 
     @Override 
     public void execute() {
-        System.out.println("_______");
         getAgente().printStats("DrivingToPassenger");
         if (Math.random() < 0.75 && getAgente().getParado() == false) DrivingPassenger();
         else {
-            System.out.println("Parece que o motorista está preso no trânsito");
+            System.out.println("| Parece que o motorista está preso no trânsito");
             getAgente().setParado(true);
         }
-        System.out.println("_______");
+        System.out.println("+--------------------------------------------");
     }
     
     @Override 
     public void exit() {
-        System.out.println("_______");
-        getAgente().printStats("DrivingToPassenger");
-        System.out.println("Dirigindo até o destino: " + getAgente().getKmViagem() + " km.");
-        System.out.println("_______");
+        System.out.println("|  [saída] Dirigindo até o destino: " + getAgente().getKmViagem() + " km.");
     }
 
 
@@ -31,9 +27,9 @@ public class DrivingToPassenger extends AbstractState<Motorista> {
             if (getAgente().getKmRodados() > getAgente().getKmPassageiro()) {
                 getAgente().SetKmRodados(getAgente().getKmPassageiro());
             }
-            System.out.println("Dirigindo até o passageiro: " + getAgente().getNome() + ", Km rodados: " + getAgente().getKmRodados() + "/" + getAgente().getKmPassageiro());
+            System.out.println("| Dirigindo até o passageiro: " + getAgente().getNome() + ", Km rodados: " + getAgente().getKmRodados() + "/" + getAgente().getKmPassageiro());
         } else {
-            System.out.println("Passageiro: " + getAgente().getNome() + " entrou no carro.");
+            System.out.println("| Passageiro: " + getAgente().getNome() + " entrou no carro.");
             getAgente().SetKmRodados(0);
             getAgente().setState(new DeliveringPassenger(getAgente()));
         }

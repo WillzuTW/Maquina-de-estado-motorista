@@ -4,11 +4,8 @@ public class Observando extends AbstractState<Casualidades> {
     }
 
     public void execute() {
-        System.out.println("_______");
         getAgente().printStats("Observando");
-        for (Motorista motorista : getAgente().getMotoristas()) {
-            System.out.println(motorista);
-        }
-        System.out.println("_______");
+        System.out.println("| Observando: " + getAgente().getMotoristas());
+        System.out.println("+--------------------------------------------");
     }
 }

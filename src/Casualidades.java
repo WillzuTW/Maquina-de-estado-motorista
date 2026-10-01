@@ -1,21 +1,24 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Casualidades implements Agente {
 
     private State<Casualidades> state = new Observando(this);
-    private final List<Motorista> motoristas;
+    private final Motorista motoristas;
 
-    public List<Motorista> getMotoristas() {
+    public Motorista getMotoristas() {
         return motoristas;
     }
-    
-    public Casualidades(List<Motorista> motoristas) {
+
+    public Casualidades(Motorista motoristas) {
         this.motoristas = motoristas;
     }
 
     public void printStats(String state) {
-        System.out.println("Estado atual: " + state);
+        System.out.println("+-- " + this + " ----------------------");
+        System.out.println("| Estado atual: " + state);
+    }
+
+    @Override
+    public String toString() {
+        return "Casualidades #" + String.format("%04X", System.identityHashCode(this) & 0xFFFF);
     }
 
     public void update() {
@@ -23,6 +26,7 @@ public class Casualidades implements Agente {
     }
 
     public void setState(State state) {
+        System.out.println("|  >> Transição: " + this.state.getClass().getSimpleName() + " -> " + state.getClass().getSimpleName());
         this.state.exit();
         this.state = state;
         this.state.enter();
