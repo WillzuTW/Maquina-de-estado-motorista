@@ -16,10 +16,10 @@ Você pode rodar este projeto de duas maneiras:
 2. Navegue até a pasta `src` do projeto.
 3. No Windows, você pode clicar na barra de endereços do explorador de arquivos, digitar `cmd` e apertar Enter para abrir o terminal direto nessa pasta.
 4. Compile o arquivo principal digitando o comando abaixo:
-   ```bash
+   ```
    javac Main.java
 5. Em seguida, rode o programa compilado com o comando:
-   ```bash
+   ```
    java Main
 
 
@@ -29,7 +29,7 @@ Esse agente é responsável por iniciar uma busca por um passageiro; Buscar ele;
 ### Casualidade
 Esse agente é responsável por monitorar se o motorista parou o carro, quando o motorista para o carro o agente sorteia o motivo por causa disso e só libera quando passa um tempo determinado exclusivo por motivo.
 
-```bash
+```
 $ javac Main.java
 $ java Main
 Iniciando corrida...
