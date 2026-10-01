@@ -28,10 +28,14 @@ Esse agente é responsável por iniciar uma busca por um passageiro; Buscar ele;
 Esse agente é responsável por monitorar se o motorista parou o carro, quando o motorista para o carro o agente sorteia o motivo por causa disso e só libera quando passa um tempo determinado exclusivo por motivo.
 
 ```
-$ javac Main.java
-$ java Main
-Iniciando corrida...
-Motorista a caminho.
++-- Motorista@14dad5dc -------------------------
+| Estado atual: Parking
+| Passageiro encontrado: Maria, Km da viagem: 3
++--------------------------------------------
++-- Casualidades@15db9742 ----------------------
+| Estado atual: Observando
+| Observando: Motorista@14dad5dc
++--------------------------------------------
 ```
 
 
