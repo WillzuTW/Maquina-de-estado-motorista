@@ -21,3 +21,6 @@ Você pode rodar este projeto de duas maneiras:
 5. Em seguida, rode o programa compilado com o comando:
    ```bash
    java Main
+
+### Referências
+Neste projeto foi usado IA para consultar documentação de java e também para encontrar erros de digitação durante o código 
