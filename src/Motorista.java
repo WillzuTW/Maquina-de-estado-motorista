@@ -3,12 +3,25 @@ public class Motorista implements Agente {
     private int KmRodados;
     private int KmViagem;
     private int KmPassageiro;
+    private int tempo;
     public boolean parado = false;
 
     private State<Motorista> state = new Parking(this);
 
     public String getNome() {
         return this.nome_passageio;
+    }
+
+    public int getTempo() {
+        return this.tempo;
+    }
+
+    public int setTempo(int tempo) {
+        return this.tempo = tempo;
+    }
+
+    public int addTempo(int tempo) {
+        return this.tempo += tempo;
     }
 
     public void setNome(String nome) {
