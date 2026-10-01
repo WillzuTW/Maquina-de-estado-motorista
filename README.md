@@ -6,12 +6,12 @@
 
 Você pode rodar este projeto de duas maneiras:
 
-### Opção 1: Via Editor/IDE (Recomendado)
+### Opção 1: Via Editor/IDE
 1. Baixe ou clone o projeto para o seu computador.
 2. Abra a pasta do projeto no seu editor de código ou IDE.
 3. Execute o projeto diretamente pelo botão de "Run" do seu editor na classe `Main`.
 
-### Opção 2: Via Terminal (Linha de comando)
+### Opção 2: Via Terminal
 1. Baixe ou clone o projeto para o seu computador.
 2. Navegue até a pasta `src` do projeto.
 3. No Windows, você pode clicar na barra de endereços do explorador de arquivos, digitar `cmd` e apertar Enter para abrir o terminal direto nessa pasta.
