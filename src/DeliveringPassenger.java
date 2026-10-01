@@ -13,6 +13,7 @@ public class DeliveringPassenger extends AbstractState<Motorista> {
             getAgente().setParado(true);
         }
         System.out.println("+--------------------------------------------");
+        getAgente().addTempo(1);
     }
 
     public void deliverPassanger() {
@@ -28,7 +29,6 @@ public class DeliveringPassenger extends AbstractState<Motorista> {
             getAgente().setTempo(0);
             getAgente().setState(new Parking(getAgente()));
         }
-        getAgente().addTempo(1);
 
         
 
