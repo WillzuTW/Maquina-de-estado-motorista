@@ -27,6 +27,8 @@ Esse agente é responsável por iniciar uma busca por um passageiro; Buscar ele;
 ### Casualidade
 Esse agente é responsável por monitorar se o motorista parou o carro, quando o motorista para o carro o agente sorteia o motivo por causa disso e só libera quando passa um tempo determinado exclusivo por motivo.
 
+## Como analisar no terminal as alterações?
+Quando você iniciar você ira se deparar com essa tela aqui
 ```
 +-- Motorista@14dad5dc -------------------------
 | Estado atual: Parking
@@ -37,6 +39,9 @@ Esse agente é responsável por monitorar se o motorista parou o carro, quando o
 | Observando: Motorista@14dad5dc
 +--------------------------------------------
 ```
+Aqui temos dois blocos o primeiro sendo do objeto Motorista e o segundo o objeto Casualidades
+Logo abaixo do nomes desses objetos temos o estado atual que ele se encontra e mais um abaixo temos o que está sendo imprimido para facilitar a compreensão do que está acontecendo no código.
+Nela irá ter o que está acontecendo a cada interação.
 
 
 
