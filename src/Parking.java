@@ -1,7 +1,7 @@
 public class Parking extends AbstractState<Motorista> {
 
-    public Parking(Motorista motorista) {
-        super(motorista);
+    public Parking(Motorista agente) {
+        super(agente);
     }
 
     @Override
