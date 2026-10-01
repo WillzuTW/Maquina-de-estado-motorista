@@ -6,8 +6,12 @@ public class DeliveringPassenger extends AbstractState {
 
     @Override 
     public void execute() {
+        deliverPassanger();
+    }
+
+    public void deliverPassanger() {
         if (GetMotorista().getKmRodados() < GetMotorista().getKmViagem()) {
-            GetMotorista().addKmRodados((int) (Math.random() * 10));
+            GetMotorista().addKmRodados((int) (Math.random() * 9) + 1);
             if (GetMotorista().getKmRodados() > GetMotorista().getKmViagem()) {
                 GetMotorista().SetKmRodados(GetMotorista().getKmViagem());
             }
@@ -17,6 +21,9 @@ public class DeliveringPassenger extends AbstractState {
             GetMotorista().SetKmRodados(0);
             GetMotorista().setState(new Parking(GetMotorista()));
         }
+
+        
+
     }
     
 }

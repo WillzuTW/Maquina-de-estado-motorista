@@ -3,6 +3,7 @@ public class Motorista {
     private int KmRodados;
     private int KmViagem;
     private int KmPassageiro;
+    public boolean parado = false;
 
     private State state = new Parking(this);
 
@@ -48,7 +49,6 @@ public class Motorista {
     }
 
     
-
     public void setState(State state) {
         this.state.exit();
         this.state = state;

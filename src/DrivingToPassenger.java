@@ -6,8 +6,17 @@ public class DrivingToPassenger extends AbstractState {
 
     @Override 
     public void execute() {
+        DrivingPassenger();
+    }
+    
+    @Override 
+    public void exit() {
+        System.out.println("Dirigindo até o destino: " + GetMotorista().getKmViagem() + " km.");
+    }
+
+    public void DrivingPassenger() {
         if (GetMotorista().getKmRodados() < GetMotorista().getKmPassageiro()) {
-            GetMotorista().addKmRodados((int) (Math.random() * 10));
+            GetMotorista().addKmRodados((int) (Math.random() * 9) + 1);
             if (GetMotorista().getKmRodados() > GetMotorista().getKmPassageiro()) {
                 GetMotorista().SetKmRodados(GetMotorista().getKmPassageiro());
             }
@@ -17,11 +26,5 @@ public class DrivingToPassenger extends AbstractState {
             GetMotorista().SetKmRodados(0);
             GetMotorista().setState(new DeliveringPassenger(GetMotorista()));
         }
-    }
-    
-    @Override 
-    public void exit() {
-        System.out.println("Dirigindo até o destino: " + GetMotorista().getKmViagem() + " km.");
-    }
-    
+    } 
 }
