@@ -7,7 +7,7 @@ public class DeliveringPassenger extends AbstractState<Motorista> {
     @Override 
     public void execute() {
         getAgente().printStats("DeliveringPassenger");
-        if (Math.random() < 0.75) deliverPassanger();
+        if (Math.random() < 0.75 && getAgente().getParado() == false) deliverPassanger();
         else {
             System.out.println("Parece que o motorista está preso no trânsito");
             getAgente().setParado(true);
@@ -16,7 +16,6 @@ public class DeliveringPassenger extends AbstractState<Motorista> {
     }
 
     public void deliverPassanger() {
-        getAgente().setParado(false);
         if (getAgente().getKmRodados() < getAgente().getKmViagem()) {
             getAgente().addKmRodados((int) (Math.random() * 9) + 1);
             if (getAgente().getKmRodados() > getAgente().getKmViagem()) {
