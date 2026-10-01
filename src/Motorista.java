@@ -56,9 +56,13 @@ public class Motorista implements Agente {
         state.execute();
     }
 
-    public void setState(State<Motorista> state) {
+    public void setState(State state) {
         this.state.exit();
         this.state = state;
         this.state.enter();
+    }
+
+    public void printStats(String state) {
+        System.out.println("Estado atual: " + state);
     }
 }
