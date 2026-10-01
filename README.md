@@ -22,5 +22,12 @@ Você pode rodar este projeto de duas maneiras:
    ```bash
    java Main
 
-### Referências
+
+## Agentes
+### Motorista
+Esse agente é responsável por iniciar uma busca por um passageiro; Buscar ele; Levar ele até o destino, e por fim parar o carro.
+### Casualidade
+Esse agente é responsável por monitorar se o motorista parou o carro, quando o motorista para o carro o agente sorteia o motivo por causa disso e só libera quando passa um tempo determinado exclusivo por motivo.
+
+## Referências
 Neste projeto foi usado IA para consultar documentação de java e também para encontrar erros de digitação durante o código 
