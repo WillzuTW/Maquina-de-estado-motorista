@@ -18,3 +18,6 @@ Você pode rodar este projeto de duas maneiras:
 4. Compile o arquivo principal digitando o comando abaixo:
    ```bash
    javac Main.java
+5. Em seguida, rode o programa compilado com o comando:
+   ```bash
+   java Main
