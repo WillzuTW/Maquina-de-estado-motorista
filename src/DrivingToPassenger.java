@@ -6,6 +6,7 @@ public class DrivingToPassenger extends AbstractState<Motorista> {
 
     @Override 
     public void execute() {
+        getAgente().printStats("DrivingToPassenger");
         if (Math.random() < 0.75) DrivingPassenger();
         else {
             System.out.println("Parece que o motorista está preso no trânsito");

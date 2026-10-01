@@ -3,7 +3,7 @@ public class Motorista implements Agente {
     private int KmRodados;
     private int KmViagem;
     private int KmPassageiro;
-    private boolean parado = false;
+    public boolean parado = false;
 
     private State<Motorista> state = new Parking(this);
 
@@ -63,6 +63,7 @@ public class Motorista implements Agente {
     }
 
     public void printStats(String state) {
+        System.out.println("Objeto: " + this);
         System.out.println("Estado atual: " + state);
     }
 }

@@ -11,6 +11,7 @@ public class Parking extends AbstractState<Motorista> {
 
     @Override 
     public void execute() {
+        getAgente().printStats("Parking");
         if (Math.random() < 0.75) {
             String[] passageiros = {"João", "Maria", "Pedro", "Ana", "Lucas"};
             getAgente().setKmPassageiro((int) (Math.random() * 10));
