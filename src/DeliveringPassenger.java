@@ -13,18 +13,18 @@ public class DeliveringPassenger extends AbstractState<Motorista> {
             getAgente().setParado(true);
         }
         System.out.println("+--------------------------------------------");
-        getAgente().addTempo(1);
     }
 
     public void deliverPassanger() {
         if (getAgente().getKmRodados() < getAgente().getKmViagem()) {
+            getAgente().addTempo(1);
             getAgente().addKmRodados(1);
             if (getAgente().getKmRodados() > getAgente().getKmViagem()) {
                 getAgente().SetKmRodados(getAgente().getKmViagem());
             }
             System.out.println("| Entregando passageiro: " + getAgente().getNome() + ", Km rodados: " + getAgente().getKmRodados() + "/" + getAgente().getKmViagem());
         } else {
-            System.out.println("| Viagem concluída. Passageiro: " + getAgente().getNome() + ", Km rodados: " + getAgente().getKmRodados() + ", tempo total da viagem: " + getAgente().getTempo() + " minutos.");
+            System.out.println("| Viagem concluída. Passageiro: " + getAgente().getNome() + ", tempo total da viagem: " + getAgente().getTempo() + " minutos.");
             getAgente().SetKmRodados(0);
             getAgente().setTempo(0);
             getAgente().setState(new Parking(getAgente()));

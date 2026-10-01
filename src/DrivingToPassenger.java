@@ -13,7 +13,6 @@ public class DrivingToPassenger extends AbstractState<Motorista> {
             getAgente().setParado(true);
         }
         System.out.println("+--------------------------------------------");
-        getAgente().addTempo(1);
     }
     
     @Override 
@@ -24,6 +23,7 @@ public class DrivingToPassenger extends AbstractState<Motorista> {
 
     public void DrivingPassenger() {
         if (getAgente().getKmRodados() < getAgente().getKmPassageiro()) {
+            getAgente().addTempo(1);
             getAgente().addKmRodados(1);
             if (getAgente().getKmRodados() > getAgente().getKmPassageiro()) {
                 getAgente().SetKmRodados(getAgente().getKmPassageiro());
