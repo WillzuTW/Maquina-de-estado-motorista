@@ -1,25 +1,20 @@
-public abstract class AbstractState implements State {
-    private Motorista motorista;
-    public AbstractState(Motorista motorista) {
-        this.motorista = motorista;
+public abstract class AbstractState<A> implements State<A> {
+    private final A agente;
+
+    public AbstractState(A agente) {
+        this.agente = agente;
     }
 
-    @Override 
-    public Motorista GetMotorista() {
-        return motorista;
+    @Override
+    public A getAgente() {
+        return agente;
     }
 
-    @Override 
-    public Void printStats() {
-        System.out.println("Motorista: " + motorista.getNome());
-        return null;
-    }
-
-    @Override 
+    @Override
     public void enter() {
     }
 
-    @Override 
+    @Override
     public void exit() {
     }
 }

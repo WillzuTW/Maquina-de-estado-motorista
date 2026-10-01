@@ -1,8 +1,7 @@
-public interface State {
-    Motorista GetMotorista();
-    Void printStats();
+public interface State<A> {
+    A getAgente();
 
     void enter();
-    void exit();
     void execute();
+    void exit();
 }

@@ -1,11 +1,11 @@
-public class Motorista {
+public class Motorista implements Agente {
     private String nome_passageio;
     private int KmRodados;
     private int KmViagem;
     private int KmPassageiro;
-    public boolean parado = false;
+    private boolean parado = false;
 
-    private State state = new Parking(this);
+    private State<Motorista> state = new Parking(this);
 
     public String getNome() {
         return this.nome_passageio;
@@ -29,7 +29,7 @@ public class Motorista {
 
     public void SetKmViagem(int km) {
         this.KmViagem = km;
-    }   
+    }
 
     public int getKmPassageiro() {
         return this.KmPassageiro;
@@ -51,27 +51,14 @@ public class Motorista {
         this.parado = parado;
     }
 
+    @Override
     public void update() {
         state.execute();
     }
 
-    
-    public void setState(State state) {
+    public void setState(State<Motorista> state) {
         this.state.exit();
         this.state = state;
         this.state.enter();
-    }
-
-    public static void main(String[] args) {
-        Motorista motorista = new Motorista();
-        while(true) {
-            motorista.update();
-
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
     }
 }

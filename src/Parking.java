@@ -1,4 +1,4 @@
-public class Parking extends AbstractState{
+public class Parking extends AbstractState<Motorista> {
 
     public Parking(Motorista motorista) {
         super(motorista);
@@ -13,11 +13,11 @@ public class Parking extends AbstractState{
     public void execute() {
         if (Math.random() < 0.75) {
             String[] passageiros = {"João", "Maria", "Pedro", "Ana", "Lucas"};
-            GetMotorista().setKmPassageiro((int) (Math.random() * 10));
-            GetMotorista().SetKmViagem((int) (Math.random() * 20));
-            GetMotorista().setNome(passageiros[(int) (Math.random() * passageiros.length)]);
-            System.out.println("Passageiro encontrado: " + GetMotorista().getNome() + ", Km da viagem: " + GetMotorista().getKmPassageiro());
-            GetMotorista().setState(new DrivingToPassenger(GetMotorista()));
+            getAgente().setKmPassageiro((int) (Math.random() * 10));
+            getAgente().SetKmViagem((int) (Math.random() * 20));
+            getAgente().setNome(passageiros[(int) (Math.random() * passageiros.length)]);
+            System.out.println("Passageiro encontrado: " + getAgente().getNome() + ", Km da viagem: " + getAgente().getKmPassageiro());
+            getAgente().setState(new DrivingToPassenger(getAgente()));
         } else {
             System.out.println("Nenhum passageiro encontrado.");
         }
