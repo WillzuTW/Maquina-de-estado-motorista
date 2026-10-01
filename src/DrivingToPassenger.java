@@ -8,6 +8,9 @@ public class DrivingToPassenger extends AbstractState {
     public void execute() {
         if (GetMotorista().getKmRodados() < GetMotorista().getKmPassageiro()) {
             GetMotorista().addKmRodados((int) (Math.random() * 10));
+            if (GetMotorista().getKmRodados() > GetMotorista().getKmPassageiro()) {
+                GetMotorista().SetKmRodados(GetMotorista().getKmPassageiro());
+            }
             System.out.println("Dirigindo até o passageiro: " + GetMotorista().getNome() + ", Km rodados: " + GetMotorista().getKmRodados() + "/" + GetMotorista().getKmPassageiro());
         } else {
             System.out.println("Passageiro: " + GetMotorista().getNome() + " entrou no carro.");
