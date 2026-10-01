@@ -21,8 +21,6 @@ Você pode rodar este projeto de duas maneiras:
 5. Em seguida, rode o programa compilado com o comando:
    ```
    java Main
-
-
 ## Agentes
 ### Motorista
 Esse agente é responsável por iniciar uma busca por um passageiro; Buscar ele; Levar ele até o destino, e por fim parar o carro.
