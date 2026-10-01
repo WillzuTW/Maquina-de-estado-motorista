@@ -6,13 +6,14 @@ public class DeliveringPassenger extends AbstractState<Motorista> {
 
     @Override 
     public void execute() {
+        System.out.println("_______");
         getAgente().printStats("DeliveringPassenger");
         if (Math.random() < 0.75 && getAgente().getParado() == false) deliverPassanger();
         else {
             System.out.println("Parece que o motorista está preso no trânsito");
             getAgente().setParado(true);
         }
-        
+        System.out.println("_______");
     }
 
     public void deliverPassanger() {

@@ -65,5 +65,6 @@ public class Motorista implements Agente {
     public void printStats(String state) {
         System.out.println("Objeto: " + this);
         System.out.println("Estado atual: " + state);
+
     }
 }

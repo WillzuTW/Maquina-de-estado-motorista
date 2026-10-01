@@ -6,11 +6,15 @@ public class Parking extends AbstractState<Motorista> {
 
     @Override
     public void enter() {
+        System.out.println("_______");
+        getAgente().printStats("Parking");
         System.out.println("Procurando passageiros...");
+        System.out.println("_______");
     }
 
     @Override 
     public void execute() {
+        System.out.println("_______");
         getAgente().printStats("Parking");
         if (Math.random() < 0.75) {
             String[] passageiros = {"João", "Maria", "Pedro", "Ana", "Lucas"};
@@ -22,5 +26,7 @@ public class Parking extends AbstractState<Motorista> {
         } else {
             System.out.println("Nenhum passageiro encontrado.");
         }
+        System.out.println("_______");
     }
+
 }

@@ -6,8 +6,11 @@ public class Main {
 
     public void run() {
         Motorista motorista = new Motorista();
+        Motorista motorista2 = new Motorista();
+        Casualidades casualidades = new Casualidades(List.of(motorista, motorista2));
         agentes.add(motorista);
-
+        agentes.add(casualidades);
+        agentes.add(motorista2);
         while (true) {
             for (Agente a : agentes) {
                 a.update();
