@@ -35,7 +35,7 @@ public class Eventos extends AbstractState<Casualidades> {
     }
 
     public void acidente() {
-        if (getAgente().getTempoParado() > 1) {
+        if (getAgente().getTempoParado() > 0) {
             getAgente().DecreaseTempoParado(1);
             System.out.println("| Evento: Acidente de carro. Motorista parado.");
             System.out.println("| Tempo restante para voltar a dirigir: " + getAgente().getTempoParado() + " minutos.");
@@ -49,7 +49,7 @@ public class Eventos extends AbstractState<Casualidades> {
     }
 
     public void sinal_fechado() {
-        if (getAgente().getTempoParado() > 1) {
+        if (getAgente().getTempoParado() > 0) {
             getAgente().DecreaseTempoParado(1);
             System.out.println("| Evento: Sinal fechado. Motorista parado.");
             System.out.println("| Tempo restante para voltar a dirigir: " + getAgente().getTempoParado() + " minutos.");
@@ -63,7 +63,7 @@ public class Eventos extends AbstractState<Casualidades> {
     }
 
     public void Pedestre_passando() {
-        if (getAgente().getTempoParado() > 1) {
+        if (getAgente().getTempoParado() > 0) {
             getAgente().DecreaseTempoParado(1);
             System.out.println("| Evento: Pedestre atravessando a rua. Motorista parado.");
             System.out.println("| Tempo restante para voltar a dirigir: " + getAgente().getTempoParado() + " minutos.");
