@@ -24,8 +24,16 @@ Você pode rodar este projeto de duas maneiras:
 ## Agentes
 ### Motorista
 Esse agente é responsável por iniciar uma busca por um passageiro; Buscar ele; Levar ele até o destino, e por fim parar o carro.
+#### Estados:
+1. Parking: Faz a procura dos passageiros e o sorteio para ver se os acha
+2. DrivingToPassenger: Faz o percurso para buscar o passageiro e também para o carro por meio de um sorteio.
+3. DeliveringPassenger: Faz o percuso até o destino que o passageiro definiu e também realizada o sorteio para parar o carro.
+   
 ### Casualidade
 Esse agente é responsável por monitorar se o motorista parou o carro, quando o motorista para o carro o agente sorteia o motivo por causa disso e só libera quando passa um tempo determinado exclusivo por motivo.
+#### Estados:
+1. Observando: Observa se o carro parou no meio do trajeto.
+2. Eventos: Sorteia um evento aleatório que prende o carro por x interações e libera após isso.
 
 ## Como analisar no terminal as alterações?
 Quando você iniciar você ira se deparar com essa tela aqui
