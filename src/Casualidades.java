@@ -56,18 +56,12 @@ public class Casualidades implements Agente {
         System.out.println("| Estado atual: " + state);
     }
 
-    @Override
-    public String toString() {
-        return "Casualidades #" + String.format("%04X", System.identityHashCode(this) & 0xFFFF);
-    }
-
     public void update() {
         state.execute();
     }
 
     public void setState(State state) {
-        System.out.println("|  >> Transição: " + this.state.getClass().getSimpleName() + " -> " + state.getClass().getSimpleName());
-        this.state.exit();
+        this.state.leave();
         this.state = state;
         this.state.enter();
     }

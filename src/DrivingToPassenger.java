@@ -17,7 +17,7 @@ public class DrivingToPassenger extends AbstractState<Motorista> {
     }
     
     @Override 
-    public void exit() {
+    public void leave() {
         System.out.println("|  [saída] Dirigindo até o destino: " + getAgente().getKmViagem() + " km.");
     }
 

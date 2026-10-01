@@ -3,5 +3,5 @@ public interface State<A> {
 
     void enter();
     void execute();
-    void exit();
+    void leave();
 }

@@ -15,6 +15,6 @@ public abstract class AbstractState<A> implements State<A> {
     }
 
     @Override
-    public void exit() {
+    public void leave() {
     }
 }
