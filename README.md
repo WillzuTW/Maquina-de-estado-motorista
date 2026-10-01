@@ -29,7 +29,7 @@ Esse agente é responsável por iniciar uma busca por um passageiro; Buscar ele;
 2. DrivingToPassenger: Faz o percurso para buscar o passageiro e também para o carro por meio de um sorteio.
 3. DeliveringPassenger: Faz o percuso até o destino que o passageiro definiu e também realizada o sorteio para parar o carro.
    
-### Casualidade
+#### Casualidade
 Esse agente é responsável por monitorar se o motorista parou o carro, quando o motorista para o carro o agente sorteia o motivo por causa disso e só libera quando passa um tempo determinado exclusivo por motivo.
 #### Estados:
 1. Observando: Observa se o carro parou no meio do trajeto.
