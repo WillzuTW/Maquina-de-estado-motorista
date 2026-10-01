@@ -1,7 +1,7 @@
 public class DrivingToPassenger extends AbstractState<Motorista> {
 
-    public DrivingToPassenger(Motorista motorista) {
-        super(motorista);
+    public DrivingToPassenger(Motorista agente) {
+        super(agente);
     }
 
     @Override 
