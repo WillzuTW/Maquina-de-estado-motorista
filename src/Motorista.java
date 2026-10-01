@@ -43,6 +43,13 @@ public class Motorista {
         return this.KmRodados;
     }
 
+    public boolean getParado() {
+        return this.parado;
+    }
+
+    public void setParado(boolean parado) {
+        this.parado = parado;
+    }
 
     public void update() {
         state.execute();
