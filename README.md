@@ -57,6 +57,6 @@ Nela irá ter o que está acontecendo a cada interação.
 
 ## Documento
 [Clique aqui para ler a Documentação Completa (PDF)](documentos/manual-motorista.pdf)
-](https://github.com/WillzuTW/Maquina-de-estado-motorista/blob/main/Documento/M%C3%A1quina%20de%20estados%20-%20motorista%20de%20aplicativo.pdf)
+
 ## Referências
 Neste projeto foi usado IA para consultar documentação de java e também para encontrar erros de digitação durante o código 
