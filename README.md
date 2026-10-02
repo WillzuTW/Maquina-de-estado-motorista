@@ -53,7 +53,7 @@ Nela irá ter o que está acontecendo a cada interação.
 
 ## Diagramas
 ![Diagrama da Máquina de Estados](https://github.com/WillzuTW/Maquina-de-estado-motorista/blob/main/Diagramas/Motorista%20de%20aplicativo.drawio.png)
-[![Diagrama da Máquina de Estados](https://github.com/WillzuTW/Maquina-de-estado-motorista/blob/main/Diagramas/M%C3%A1quina%20de%20estados.png)
+![Diagrama da Máquina de Estados](https://github.com/WillzuTW/Maquina-de-estado-motorista/blob/main/Diagramas/M%C3%A1quina%20de%20estados.png)
 
 
 ## Referências
