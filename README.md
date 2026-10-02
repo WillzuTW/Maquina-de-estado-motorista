@@ -52,7 +52,7 @@ Logo abaixo do nomes desses objetos temos o estado atual que ele se encontra e m
 Nela irá ter o que está acontecendo a cada interação.
 
 ## Diagramas
-![Diagrama da Máquina de Estados]([Diagramas/Motorista de aplicativo.drawio.png](https://github.com/WillzuTW/Maquina-de-estado-motorista/blob/main/Diagramas/Motorista%20de%20aplicativo.drawio.png))
+![Diagrama da Máquina de Estados](https://github.com/WillzuTW/Maquina-de-estado-motorista/blob/main/Diagramas/Motorista%20de%20aplicativo.drawio.png)
 
 ## Referências
 Neste projeto foi usado IA para consultar documentação de java e também para encontrar erros de digitação durante o código 
